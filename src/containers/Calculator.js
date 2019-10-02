@@ -11,6 +11,8 @@ class Calculator extends Component {
         this.state = {fno:this.fno ,sno:this.sno,res:this.res};
     }
     first(event){
+        console.log("event is",event);
+        console.log("target is",event.target);
       this.setState({fno:Number(event.target.value)}) ;
       console.log(event.target.value);
     }
@@ -21,18 +23,22 @@ class Calculator extends Component {
      add(){
          console.log('add called');
          let x=this.state.fno+this.state.sno;
+         conole.log("addtion is",x);
          this.setState({res:x});
      }
      sub(){
         let x=this.state.fno-this.state.sno;
+         console.log("subtraction is",x);
          this.setState({res:x});  
      }
      mul(){
         let x=this.state.fno*this.state.sno;
+           console.log("multiplication is",x);
          this.setState({res:x});  
      }
      div(){
         let x=this.state.fno/this.state.sno;
+           console.log("divid is",x);
          this.setState({res:x});  
      }
      
